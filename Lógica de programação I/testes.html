@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	
+	function mostrarTexto(msg) {
+		document.write(msg);
+		pularLinha();
+	}
+
+	function pularLinha(num) {
+		if(num == null) {
+			num = 1;
+		}
+
+		for (var i = num- 1; i >= 0; i--) {
+			document.write("<br>");
+		}
+		
+	}
+
+	function calcularIMC(peso,altura) {
+		return peso / (altura * altura);
+	}
+
+	function pegarInformacao(titulo,texto) {
+		return prompt(titulo,texto);
+	}
+
+	function calcularIMC(peso,altura) {
+		return peso / (altura * altura);
+	}
+
+	function pegarInformacao(titulo,texto) {
+		return prompt(titulo,texto);
+	}
+
+	function sortear(n) {
+		return Math.round(Math.random()*n);
+	}
+
+/*
+	for(x=0; x <= 10; x++) {
+		mostrarTexto(x);
+	}
+
+	var anoCopa = 1930;
+	while(anoCopa <= 2016) {
+		mostrarTexto(anoCopa);
+		anoCopa = anoCopa+4;
+	}
+
+	pularLinha(2);
+*/
+
+	//03 Todos os números pares de 1 a 100.
+	//Usando a instrução while imprima todos os números pares de 1 a 100 e ao final imprima a palavra "FIM". DICA: incremente o contador de dois em dois!
+	numero = 0;
+	while(numero <= 100) {
+		mostrarTexto(numero);
+		numero = numero+2;
+	}
+
+</script>

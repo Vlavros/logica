@@ -1,0 +1,113 @@
+<meta charset="utf-8">
+
+A convenção que usaremos para criar nosso programa é adotar letras minúsculas e não usar acentos e, claro, usar a extensão .html.
+
+<br> <br>
+
+Outro ponto importante é que toda alteração feita no arquivo .html deve ser salva e, além disso, o navegador precisa recarregar a página para que a última alteração do arquivo entre em vigor.
+
+<script type="text/javascript">
+
+	function mostrarTexto(msg) {
+		document.write(msg);
+	}
+
+	function pularLinha(num) {
+		if(num == null) {
+			num = 1;
+		}
+
+		for (var i = num- 1; i >= 0; i--) {
+			document.write("<br>");
+		}
+		
+	}
+
+	function calcularIMC(peso,altura) {
+		return peso / (altura * altura);
+	}
+
+	function pegarInformacao(titulo,texto) {
+		return prompt(titulo,texto);
+	}
+
+	document.write("<br><br> A idade do Flávio é: <br>");
+	document.write(18+20);
+
+	document.write("<br>" + "18" + 20);
+	document.write(18 + "20");
+
+	document.write("<br> <br>");
+	document.write("<br> <br> Eu nasci em " + (2019-30));
+	document.write("<br> <br>");
+
+	document.write("<br> teste: " + 2019-30); //NaN
+	document.write("<br> <br>");
+
+	//08 Que valor absurdo é esse?
+	document.write((200 + 100 + 300 + 400)/4);
+	document.write("<br> <br>");
+
+	//12 Quantos % acertei na prova?
+	document.write("Eu acertei: ");
+	document.write((15/50)*100);
+	document.write("Eu acertei: " + 15/50*100 + "%" );
+	document.write("<br> <br>");
+
+	//14 O que não fazemos por amor...
+	document.write("Flávio nasceu em " + (2016 - 39) + "<br>");
+    document.write("Joaquim nasceu em " + (2016 - 20) + "<br>");
+    document.write("Barney nasceu em " + (2016 - 40));
+    document.write("<br> <br>");
+
+    var ano = (new Date()).getFullYear();
+    var p1 = ano - 1977;
+    var p2 = ano - 1996;
+    var p3 = ano - 1961;
+    var media = (p1+p2+p3)/3;
+
+    document.write("Pessoa 1 tem " + p1 + " anos <br>");
+    document.write("Pessoa 2 tem " + p2 + " anos <br>");
+    document.write("Pessoa 3 tem " + p3 + " anos <br>");
+    document.write("A média é: " + media);
+    document.write("<br> <br>");
+
+    document.write("Resultado: " + Math.round(10/3) + "<br>");
+    document.write("Resultado: " + 10/3);
+    document.write("<br> <br>");
+
+    //12 A idade do meu irmão
+    //Escreva um programa que exiba a mensagem "Nossa diferença de idade é", concatenando o resultado da subtração da sua idade com a do seu irmão (ou de um amigo). A resposta pode dar negativa, sem dúvida. Não esqueça de usar as funções pulaLinha e mostra e inclusive a tag <meta> para resolver problema de acentuação.
+    var minhaIdade = 30;
+    var idadeIrmao = 41;
+    mostrarTexto("Nossa diferença de idade é " + (idadeIrmao-minhaIdade));
+    pularLinha(2);
+
+    //13 O problema das gerações
+    //Em média, um casal tem filhos quando atinge a idade de 28 anos. Seguindo essa média, se os portugueses chegaram em 1500 no Brasil, então, a primeira geração de brasileiros surgiu em 1528, a segunda em 1556 e assim por diante. Desde 1500 até o ano atual, quantas gerações se passaram?
+    var idadeGeracao = 28;
+    var anoInicio = 1500;
+    var anoAtual = (new Date()).getFullYear();
+    var numGeracoes = Math.round(anoAtual-anoInicio)/idadeGeracao;
+    mostrarTexto("Se passaram " + numGeracoes + " gerações desde o ano de " + anoInicio + " até o ano de " + anoAtual);
+    pularLinha(2);
+
+    mostrarTexto("O meu IMC é " + calcularIMC(101,1.93));
+    pularLinha(2);
+
+    //var valor = pegarInformacao("Olá","Informe o valor");
+    //document.write(valor);
+    var pesoInformado = parseInt(prompt("Qual é seu peso?"));
+    var alturaInformado = parseInt(prompt("Qual é sua altura?"));
+    mostrarTexto("O seu IMC é " + calcularIMC(pesoInformado,alturaInformado));
+    pularLinha(2);
+
+    if (pesoInformado == 100) {
+    	document.write("é igual a 100");
+    }
+
+    var numRnd = Math.round(Math.random()*10);
+    
+
+
+</script>
