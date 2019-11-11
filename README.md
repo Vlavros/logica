@@ -1,1 +1,3 @@
-# logica
+# Estudos de Lógica Alura
+
+
